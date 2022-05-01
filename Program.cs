@@ -55,6 +55,18 @@ int c = Convert.ToInt32(Console.ReadLine());
 if (c % 2 == 0) Console.WriteLine("Число четное");
 else Console.WriteLine("Число нечетное");
 }
-    
+
+  //Задача 4
+  
+  
+class HelloWorld {
+  static void Main() {
+      int n = Convert.ToInt32(Console.ReadLine());
+      for (int i = 2; i <= n; i += 2) {
+          Console.Write(i + " ");
+      }
+  }
+}
+
 
 
