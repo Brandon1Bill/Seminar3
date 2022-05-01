@@ -59,14 +59,14 @@ else Console.WriteLine("Число нечетное");
   //Задача 4
   
   
-class HelloWorld {
-  static void Main() {
+ {
+  Console.WriteLine("Введите число: ");
       int n = Convert.ToInt32(Console.ReadLine());
       for (int i = 2; i <= n; i += 2) {
           Console.Write(i + " ");
       }
   }
-}
+
 
 
 
