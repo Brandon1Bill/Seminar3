@@ -1,72 +1,33 @@
-﻿  {
- 
-        int a, b;
- 
-        Console.WriteLine("Введите два числа : ");
- 
-        a = Convert.ToInt32(Console.ReadLine());
- 
-        b = Convert.ToInt32(Console.ReadLine());
- 
-        if (a > b)
- 
-        {
- 
-            Console.WriteLine("{0} наибольшее число", a);
- 
-        }
- 
-        else
- 
-        {
- 
-            Console.WriteLine("{0} наибольшее число ", b);
- 
-        }
- 
-        Console.ReadLine();
- 
-    }
-   // Задача 2.
-    {
-            int[] ABCArr = new int[3];
-            bool isEven = false;
-            for (int i = 0; i < ABCArr.Length; i++)
-            {
-                Console.Write("Введите число {0} : ", i);
-                if (((ABCArr[i] = Convert.ToInt32(Console.ReadLine())) % 2 == 0) && isEven == false)
-                    isEven = true;
-            }
-            Array.Sort(ABCArr);
-            if (ABCArr[1] == ABCArr[0] || ABCArr[1] == ABCArr[2])
-                Console.WriteLine("Невозможно определить максимальный/минимальный элемент");
-            else
-            {
-                if (isEven)
-                    Console.WriteLine("Максимальное значение = {0}", ABCArr.Max());
-                else
-                    Console.WriteLine("Минимальное значение = {0}", ABCArr.Min());
-            }
-        }
-        //задача 3
-        {
-Console.WriteLine("Введите число: ");
-int c = Convert.ToInt32(Console.ReadLine());
-if (c % 2 == 0) Console.WriteLine("Число четное");
-else Console.WriteLine("Число нечетное");
-}
-
-  //Задача 4
-  
-  
- {
-  Console.WriteLine("Введите число: ");
-      int n = Convert.ToInt32(Console.ReadLine());
-      for (int i = 2; i <= n; i += 2) {
-          Console.Write(i + " ");
-      }
-  }
+﻿// 1. Показать вторую цифру трёхзначного числа
 
 
+System.Console.WriteLine();
+int number = new Random().Next(100, 1000);
+
+System.Console.WriteLine($"Второй цифрой числа {number} является {number / 10 % 10} ");
+
+System.Console.WriteLine(); 
 
 
+// 2. Показать последнюю цифру трёхзначного числа 
+
+int num = new Random().Next(100, 1000);
+
+System.Console.WriteLine($"Последней цифрой числа {number} является цифра {number%10}");
+System.Console.WriteLine();
+
+
+// 3. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+System.Console.WriteLine();
+
+int dayNumber = new Random().Next(1, 8);
+string[] Days = { "понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье" };
+string txtResult = "";
+
+if (dayNumber > 5) txtResult = $". Ура! Это выходной день!";
+else txtResult = $", рабочий день.";
+
+System.Console.WriteLine();
+System.Console.WriteLine($"{dayNumber}-й день недели - это {Days[dayNumber - 1]}{txtResult}");
+System.Console.WriteLine();
